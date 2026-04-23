@@ -1,0 +1,223 @@
+/* Page Hero */
+.page-hero {
+  position: relative;
+  height: 340px;
+  background: linear-gradient(135deg, var(--navy-dark) 0%, var(--navy) 100%);
+  display: flex;
+  align-items: flex-end;
+  padding-top: 72px;
+}
+
+.page-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: url('https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=1400&q=60') center/cover;
+  opacity: 0.15;
+}
+
+.page-hero-content {
+  position: relative;
+  z-index: 2;
+  padding-bottom: 48px;
+}
+
+.page-hero-content h1 {
+  font-size: clamp(32px, 5vw, 52px);
+  color: var(--white);
+  margin: 8px 0 12px;
+}
+
+.page-hero-content > p {
+  color: rgba(255,255,255,0.7);
+  font-size: 16px;
+}
+
+.breadcrumb {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  margin-top: 16px;
+  font-size: 13px;
+  color: rgba(255,255,255,0.5);
+}
+
+.breadcrumb a { color: var(--gold-light); }
+.breadcrumb a:hover { text-decoration: underline; }
+
+.mv-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px;
+}
+
+.mv-card {
+  padding: 40px;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--gray-light);
+}
+
+.mv-card.mission {
+  background: var(--off-white);
+  border-left: 4px solid var(--gold);
+}
+
+.mv-card.vision {
+  background: var(--navy);
+  border-left: 4px solid var(--gold);
+}
+
+.mv-card.vision h2,
+.mv-card.vision p { color: rgba(255,255,255,0.85); }
+
+.mv-icon { font-size: 36px; margin-bottom: 16px; display: block; }
+
+.mv-card h2 {
+  font-size: 22px;
+  margin-bottom: 16px;
+  color: var(--text-dark);
+}
+
+.why-choose-section { background: var(--off-white); }
+
+.why-choose-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.why-list { margin-top: 24px; display: flex; flex-direction: column; gap: 14px; }
+
+.why-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  font-size: 14px;
+  color: var(--text-mid);
+}
+
+.why-num {
+  font-size: 11px;
+  font-weight: 800;
+  color: var(--gold);
+  background: rgba(200,146,42,0.1);
+  padding: 4px 8px;
+  border-radius: 4px;
+  flex-shrink: 0;
+  letter-spacing: 0.05em;
+}
+
+.why-choose-image img {
+  width: 100%;
+  height: 440px;
+  object-fit: cover;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+}
+
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.value-card {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  padding: 32px 24px;
+  text-align: center;
+  border: 1px solid var(--gray-light);
+  transition: var(--transition);
+}
+
+.value-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--gold);
+}
+
+.value-icon { font-size: 40px; display: block; margin-bottom: 16px; }
+
+.value-card h3 {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: var(--navy);
+}
+
+.value-card p { font-size: 13px; color: var(--gray); }
+
+/* Long desc */
+.long-desc { background: var(--navy); }
+
+.long-desc-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+}
+
+.long-desc-grid h3 {
+  font-size: 20px;
+  color: var(--gold-light);
+  margin-bottom: 14px;
+}
+
+.long-desc-grid p { color: rgba(255,255,255,0.7); line-height: 1.8; }
+
+/* Team */
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.team-card {
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 1px solid var(--gray-light);
+  transition: var(--transition);
+  text-align: center;
+}
+
+.team-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); }
+
+.team-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.team-card h4 {
+  font-size: 16px;
+  font-weight: 700;
+  padding: 16px 16px 4px;
+  color: var(--text-dark);
+}
+
+.team-card span {
+  display: block;
+  font-size: 13px;
+  color: var(--gold);
+  font-weight: 600;
+  padding-bottom: 16px;
+}
+
+/* About CTA */
+.about-cta {
+  background: linear-gradient(135deg, var(--gold), #a06b1a);
+  padding: 80px 0;
+  text-align: center;
+}
+
+.about-cta h2 { font-size: 36px; color: white; margin-bottom: 12px; }
+.about-cta p { color: rgba(255,255,255,0.8); font-size: 16px; }
+
+@media (max-width: 1024px) {
+  .mv-grid, .why-choose-grid, .long-desc-grid { grid-template-columns: 1fr; }
+  .values-grid { grid-template-columns: repeat(2, 1fr); }
+  .team-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 600px) {
+  .values-grid, .team-grid { grid-template-columns: 1fr; }
+}

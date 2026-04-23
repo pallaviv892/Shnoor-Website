@@ -1,0 +1,216 @@
+.contact-hero {
+  position: relative;
+  min-height: 360px;
+  background: linear-gradient(135deg, var(--navy-dark), var(--navy));
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding-top: 72px;
+  overflow: hidden;
+}
+.contact-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: url('https://images.unsplash.com/photo-1497366216548-37526070297c?w=1400&q=60') center/cover;
+  opacity: 0.2;
+}
+
+.contact-hero-content {
+  position: relative;
+  z-index: 2;
+  padding-bottom: 48px;
+}
+.contact-hero-content h1 {
+  font-size: clamp(36px, 6vw, 60px);
+  color: var(--white);
+  margin-bottom: 12px;
+}
+
+.contact-hero-content > p {
+  color: rgba(255,255,255,0.7);
+  font-size: 16px;
+  max-width: 620px;
+  line-height: 1.7;
+  margin-bottom: 16px;
+}
+.contact-hero-icons {
+  position: absolute;
+  bottom: 40px;
+  right: 10%;
+  display: flex;
+  gap: 16px;
+  font-size: 28px;
+  opacity: 0.4;
+  z-index: 2;
+}
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 48px;
+  align-items: start;
+}
+
+.contact-form-wrapper h2 {
+  font-size: 26px;
+  color: var(--navy);
+  margin-bottom: 8px;
+}
+
+.contact-form-wrapper > p {
+  color: var(--gray);
+  margin-bottom: 28px;
+}
+
+.alert {
+  padding: 14px 18px;
+  border-radius: var(--radius);
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.alert.success {
+  background: rgba(34, 197, 94, 0.1);
+  border: 1px solid rgba(34, 197, 94, 0.3);
+  color: #166534;
+}
+
+.alert.error {
+  background: rgba(239, 68, 68, 0.1);
+  border: 1px solid rgba(239, 68, 68, 0.3);
+  color: #991b1b;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.submit-btn {
+  width: 100%;
+  justify-content: center;
+  padding: 16px;
+  font-size: 15px;
+}
+
+.submit-btn:disabled { opacity: 0.6; cursor: not-allowed; }
+
+.btn-spinner {
+  width: 16px;
+  height: 16px;
+  border: 2px solid rgba(255,255,255,0.3);
+  border-top-color: white;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+  display: inline-block;
+}
+.contact-info-card {
+  background: var(--navy);
+  border-radius: var(--radius-lg);
+  padding: 32px;
+  margin-bottom: 20px;
+}
+
+.contact-info-card h3 {
+  font-size: 18px;
+  color: var(--white);
+  margin-bottom: 24px;
+  padding-bottom: 14px;
+  border-bottom: 2px solid var(--gold);
+}
+
+.contact-detail {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+
+.ci-icon { font-size: 22px; margin-top: 2px; }
+
+.contact-detail div {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.contact-detail strong {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--gold-light);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.contact-detail a,
+.contact-detail span {
+  font-size: 14px;
+  color: rgba(255,255,255,0.75);
+  line-height: 1.5;
+  transition: var(--transition);
+}
+
+.contact-detail a:hover { color: var(--gold-light); }
+.contact-offices {
+  background: var(--off-white);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+  margin-bottom: 16px;
+  border: 1px solid var(--gray-light);
+}
+
+.contact-offices h4 {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--navy);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 16px;
+}
+
+.office-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 0;
+  border-bottom: 1px solid var(--gray-light);
+  font-size: 22px;
+}
+
+.office-item:last-child { border-bottom: none; }
+
+.office-item div {
+  display: flex;
+  flex-direction: column;
+}
+
+.office-item strong { font-size: 14px; color: var(--text-dark); }
+.office-item small { font-size: 12px; color: var(--gray); }
+.whatsapp-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: #25D366;
+  color: white;
+  padding: 14px;
+  border-radius: var(--radius);
+  font-size: 15px;
+  font-weight: 700;
+  transition: var(--transition);
+  width: 100%;
+}
+
+.whatsapp-btn:hover { background: #1ebe57; transform: translateY(-2px); box-shadow: 0 6px 20px rgba(37,211,102,0.4); }
+
+.map-placeholder { overflow: hidden; }
+.map-placeholder iframe { display: block; }
+
+@media (max-width: 1024px) {
+  .contact-grid { grid-template-columns: 1fr; }
+  .contact-hero-icons { display: none; }
+}
+
+@media (max-width: 600px) {
+  .form-row { grid-template-columns: 1fr; }
+}
